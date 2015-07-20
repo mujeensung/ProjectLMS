@@ -40,16 +40,16 @@ namespace Libary_Ver0._1
         }
     }
 
-    enum eItem
+    public enum eItem
     {
         TITLE, AUTHOR 
     }
 
-    class DBManager
+    public class DBManager : IDBManager
     {
         private string connStr = @"Data Source=c:\db\mydb.db";
-        private SQLiteConnection conn;
-        private SQLiteCommand cmd;
+        protected SQLiteConnection conn;
+        protected SQLiteCommand cmd;
         public ArrayList bookList;
         public ArrayList memberList;
         
@@ -59,33 +59,8 @@ namespace Libary_Ver0._1
             conn.Open();
         }
 
-        public void insert(stBookData d)
-        {
-            conn = new SQLiteConnection(connStr);
-            conn.Open();
-            cmd = new SQLiteCommand(conn);
-            cmd.CommandText = "INSERT INTO Book_Info VALUES(" + d.bookcode + ",\"" +
-                                                                d.title + "\",\"" +
-                                                                d.author + "\")";
+        public void insert() { }
 
-            cmd.ExecuteNonQuery();
-            conn.Close();
-        }
-        public void _insert(data d)
-        {
-            conn = new SQLiteConnection(connStr);
-            conn.Open();
-            cmd = new SQLiteCommand(conn);
-            cmd.CommandText = "INSERT INTO \"main\".\"member\" (\"id\",\"name\",\"bookListone\",\"booklisttwo\",\"booklistthree\",\"booklist\") VALUES ("
-                +d.id+",\""
-                +d.name+"\","+d.booklistone+","
-                +d.booklisttwo+","
-                +d.booklistthree+","
-                +d.booklist+")";
-
-            cmd.ExecuteNonQuery();
-            conn.Close();
-        }
         public ArrayList Select_Reader(eItem item, string str)
         {
             data Data = new data(0,"",0,0,0,0);

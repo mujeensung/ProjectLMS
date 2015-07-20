@@ -29,7 +29,7 @@ namespace Libary_Ver0._1
                 data Data = new data(Convert.ToInt32(tbid.Text),
                                                     tbname.Text,0,0,0,0);
 
-                db._insert(Data);
+                db.insert();
                 tbid.Text = "";
                 
                 tbname.Text = "";

@@ -5,11 +5,16 @@ using System.Text;
 
 namespace Libary_Ver0._1
 {
-    class LoadDB : DBManager
+    class LoadDB : DBManager, IDBManager
 	{
         private int iLoadCode;
         private int iBookCode;
         private int iStudentCode;
         private int iDate;
+
+        public void insert()
+        {
+           
+        }
 	}
 }

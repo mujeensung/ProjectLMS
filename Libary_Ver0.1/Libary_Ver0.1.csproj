@@ -67,7 +67,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoadDB.cs" />
+    <Compile Include="IDBManager.cs" />
+    <Compile Include="LoanDB.cs" />
     <Compile Include="loan.cs">
       <SubType>Form</SubType>
     </Compile>

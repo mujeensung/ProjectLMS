@@ -41,7 +41,7 @@ namespace Libary_Ver0._1
                                                     tbTitle.Text,
                                                     tbAuthor.Text);
 
-                db.insert(bookdata);
+                db.insert();
                 tbAuthor.Text = "";
                 tbBookcode.Text = "";
                 tbTitle.Text = "";
