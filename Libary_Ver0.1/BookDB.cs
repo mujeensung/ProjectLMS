@@ -10,5 +10,6 @@ namespace Libary_Ver0._1
         private int iBookCode;
         private string strTitle;
         private string strAuthor;
+//hello
 	}
 }
