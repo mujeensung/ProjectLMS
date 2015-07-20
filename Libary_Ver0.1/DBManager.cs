@@ -161,7 +161,7 @@ namespace Libary_Ver0._1
             using (var conn = new SQLiteConnection(connStr))
             {
                 conn.Open();
-                string sql = "SELECT * FROM member WHERE id =" + str +" and name =\""+strr+"\"";
+                string sql = "SELECT * FROM Student_Info WHERE studentID =" + str +" and name =\""+strr+"\"";
                 SQLiteDataAdapter adapter = new SQLiteDataAdapter(sql, conn);
                 adapter.Fill(ds);
             }
