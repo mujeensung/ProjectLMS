@@ -34,16 +34,14 @@ namespace Libary_Ver0._1
 
         private void Insert_Click(object sender, EventArgs e)
         {
-            DBManager db = new DBManager();
+            BookDB db = new BookDB();
             try
             {
-                stBookData bookdata = new stBookData(Convert.ToInt32(tbBookcode.Text),
-                                                    tbTitle.Text,
-                                                    tbAuthor.Text);
-
+                db.iBookCode = db.primarykey();
+                db.strTitle = tbTitle.Text;
+                db.strAuthor = tbAuthor.Text;
                 db.insert();
                 tbAuthor.Text = "";
-                tbBookcode.Text = "";
                 tbTitle.Text = "";
                 MessageBox.Show("register a book.");
             }
@@ -51,18 +49,15 @@ namespace Libary_Ver0._1
             {
                 MessageBox.Show("error");
                 tbAuthor.Text = "";
-                tbBookcode.Text = "";
                 tbTitle.Text = "";
             }
             catch (OverflowException)
             {
                 MessageBox.Show("error");
                 tbAuthor.Text = "";
-                tbBookcode.Text = "";
                 tbTitle.Text = "";
             }
         }
-
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Hide();

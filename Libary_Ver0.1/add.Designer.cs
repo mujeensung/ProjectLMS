@@ -36,8 +36,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbBookcode = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.tbTitle = new System.Windows.Forms.TextBox();
             this.tbAuthor = new System.Windows.Forms.TextBox();
             this.Insert = new System.Windows.Forms.Button();
@@ -88,7 +86,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 282);
+            this.label1.Location = new System.Drawing.Point(16, 255);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 6;
@@ -98,46 +96,29 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 309);
+            this.label2.Location = new System.Drawing.Point(16, 282);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 7;
             this.label2.Text = "Author";
             // 
-            // tbBookcode
-            // 
-            this.tbBookcode.Location = new System.Drawing.Point(84, 246);
-            this.tbBookcode.Name = "tbBookcode";
-            this.tbBookcode.Size = new System.Drawing.Size(198, 21);
-            this.tbBookcode.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 255);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 12);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "BookCode";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
             // tbTitle
             // 
-            this.tbTitle.Location = new System.Drawing.Point(84, 273);
+            this.tbTitle.Location = new System.Drawing.Point(90, 246);
             this.tbTitle.Name = "tbTitle";
             this.tbTitle.Size = new System.Drawing.Size(198, 21);
             this.tbTitle.TabIndex = 10;
             // 
             // tbAuthor
             // 
-            this.tbAuthor.Location = new System.Drawing.Point(84, 300);
+            this.tbAuthor.Location = new System.Drawing.Point(90, 273);
             this.tbAuthor.Name = "tbAuthor";
             this.tbAuthor.Size = new System.Drawing.Size(198, 21);
             this.tbAuthor.TabIndex = 11;
             // 
             // Insert
             // 
-            this.Insert.Location = new System.Drawing.Point(84, 327);
+            this.Insert.Location = new System.Drawing.Point(90, 300);
             this.Insert.Name = "Insert";
             this.Insert.Size = new System.Drawing.Size(198, 23);
             this.Insert.TabIndex = 12;
@@ -149,12 +130,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 358);
+            this.ClientSize = new System.Drawing.Size(343, 333);
             this.Controls.Add(this.Insert);
             this.Controls.Add(this.tbAuthor);
             this.Controls.Add(this.tbTitle);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.tbBookcode);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -178,8 +157,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbBookcode;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbTitle;
         private System.Windows.Forms.TextBox tbAuthor;
         private System.Windows.Forms.Button Insert;

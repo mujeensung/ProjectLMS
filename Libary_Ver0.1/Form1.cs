@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections;
+using System.Data.SQLite;
 
 namespace Libary_Ver0._1
 {
@@ -20,21 +21,20 @@ namespace Libary_Ver0._1
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            DBManager db = new DBManager();
-            db.DBOpen();
+            BookDB book = new BookDB();
+            book.DBOpen();
             int tmp;
             tmp = comboBox.SelectedIndex;
-            if (tmp == 0)
-            {
-                DataSet ds = db.GetData(eItem.TITLE, tb.Text);
-                dataGridView1.DataSource = ds.Tables[0];
-            }
-            else if (tmp == 1)
-            {
-                DataSet ds = db.GetData(eItem.AUTHOR, tb.Text);
-                dataGridView1.DataSource = ds.Tables[0];
-            }
-
+         if (tmp == 0)
+         {
+             DataSet ds = book.GetData(eItem.TITLE, tb.Text);
+             dataGridView1.DataSource = ds.Tables[0];
+         }
+         else if (tmp == 1)
+         {
+             DataSet ds = book.GetData(eItem.AUTHOR, tb.Text);
+            dataGridView1.DataSource = ds.Tables[0];
+         }
         }
 
         private void label2_Click(object sender, EventArgs e)

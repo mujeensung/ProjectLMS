@@ -18,10 +18,15 @@ namespace Libary_Ver0._1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DBManager db = new DBManager();
+            StudentDB db = new StudentDB();
             db.DBOpen();
-            DataSet ds = db.GetmemberData(tbID.Text,tbName.Text);
+            DataSet ds = db.GetData(Convert.ToInt32(tbStudentNumber.Text), tbName.Text.ToString());
             dataGridView1.DataSource = ds.Tables[0];
+
+        }
+
+        private void membershipinformation_Load(object sender, EventArgs e)
+        {
 
         }
     }

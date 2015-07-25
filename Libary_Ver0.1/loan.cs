@@ -28,20 +28,20 @@ namespace Libary_Ver0._1
 
         private void search_Click(object sender, EventArgs e)
         {
-            DBManager db = new DBManager();
-            db.DBOpen();
-            int tmp;
-            tmp = comboBox.SelectedIndex;
-            if (tmp == 0)
-            {
-                DataSet ds = db.GetData(eItem.TITLE, tb.Text);
-                dataGridView1.DataSource = ds.Tables[0];
-            }
-            else if (tmp == 1)
-            {
-                DataSet ds = db.GetData(eItem.AUTHOR, tb.Text);
-                dataGridView1.DataSource = ds.Tables[0];
-            }
+         //   DBManager db = new DBManager();
+         //   db.DBOpen();
+         //   int tmp;
+         //   tmp = comboBox.SelectedIndex;
+          //  if (tmp == 0)
+        //    {
+         //       DataSet ds = db.GetData(eItem.TITLE, tb.Text);
+        //        dataGridView1.DataSource = ds.Tables[0];
+        //    }
+       //     else if (tmp == 1)
+       //     {
+      //          DataSet ds = db.GetData(eItem.AUTHOR, tb.Text);
+       //         dataGridView1.DataSource = ds.Tables[0];
+        //    }
 
         }
     }

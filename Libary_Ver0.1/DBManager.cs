@@ -5,7 +5,6 @@ using System.Text;
 using System.Data.SQLite;
 using System.Data;
 using System.Collections;
-
 namespace Libary_Ver0._1
 {
     struct stBookData
@@ -20,127 +19,34 @@ namespace Libary_Ver0._1
             this.author = author;
         }
     }
-
-    struct data
+    struct stStudent
     {
-        public int id;
+        public int studentNum;
         public string name;
-        public int booklistone;
-        public int booklisttwo;
-        public int booklistthree;
-        public int booklist;
-        public data( int id, string name,int booklistone, int booklisttwo, int booklistthree, int booklist)
+        public string phone;
+        public stStudent(int studentNum, string name, string phone)
         {
-            this.id = id;
+            this.studentNum = studentNum;
             this.name = name;
-            this.booklistone = booklistone;
-            this.booklisttwo = booklisttwo;
-            this.booklistthree = booklistthree;
-            this.booklist = booklist;
+            this.phone = phone;
         }
     }
-
     public enum eItem
     {
         TITLE, AUTHOR 
     }
-
-    public class DBManager : IDBManager
+    public class DBManager 
     {
-        private string connStr = @"Data Source=c:\db\mydb.db";
+        protected string connStr = @"Data Source=c:\db\mydb.db";
         protected SQLiteConnection conn;
         protected SQLiteCommand cmd;
+        protected SQLiteCommand bookmanager;
         public ArrayList bookList;
         public ArrayList memberList;
-        
         public void DBOpen()
         {
             conn = new SQLiteConnection(connStr);
             conn.Open();
-        }
-
-        public void insert() { }
-
-        public ArrayList Select_Reader(eItem item, string str)
-        {
-            data Data = new data(0,"",0,0,0,0);
-            memberList = new ArrayList();
-
-            using (var conn = new SQLiteConnection(connStr))
-            {
-                conn.Open();
-                string sql = "SELECT * FROM member WHERE " + item.ToString() +"=\"" + str + "\"";
-
-                SQLiteCommand cmd = new SQLiteCommand(sql, conn);
-                SQLiteDataReader rdr = cmd.ExecuteReader();
-                while (rdr.Read())
-                {
-                    Data.id = Convert.ToInt32(rdr["id"]);
-                    Data.name  = rdr["name"].ToString();
-                    memberList.Add(Data);
-                }
-                rdr.Close();
-            }
-            return memberList;
-        }
-        public ArrayList _Select_Reader(eItem item, string str)
-        {
-            stBookData bookData = new stBookData(0, "", "");
-            bookList = new ArrayList();
-
-            using (var conn = new SQLiteConnection(connStr))
-            {
-                conn.Open();
-                string sql = "SELECT * FROM Book_Info WHERE " + item.ToString() + "=\"" + str + "\"";
-
-                SQLiteCommand cmd = new SQLiteCommand(sql, conn);
-                SQLiteDataReader rdr = cmd.ExecuteReader();
-                while (rdr.Read())
-                {
-                    bookData.author = rdr["author"].ToString();
-                    bookData.title = rdr["title"].ToString();
-                    bookList.Add(bookData);
-                }
-                rdr.Close();
-            }
-            return bookList;
-        }
-        public ArrayList getBookList()
-        {
-            return bookList;
-        }
-        public ArrayList getmemberList()
-        {
-            return memberList;
-        }
-        public DataSet GetData(eItem item, string str)
-        {
-            stBookData bookData = new stBookData(0, "", "");
-            bookList = new ArrayList();
-            DataSet ds = new DataSet();
-
-            using (var conn = new SQLiteConnection(connStr))
-            {
-                conn.Open();
-                string sql = "SELECT * FROM Book_Info WHERE " + item.ToString() + "=\"" + str + "\"";
-                SQLiteDataAdapter adapter = new SQLiteDataAdapter(sql, conn);
-                adapter.Fill(ds);
-            }
-            return ds;
-        }
-        public DataSet GetmemberData(string str,string strr)
-        {
-            data Data = new data(0, "",0,0,0,0);
-            bookList = new ArrayList();
-            DataSet ds = new DataSet();
-            using (var conn = new SQLiteConnection(connStr))
-            {
-                conn.Open();
-                string sql = "SELECT * FROM Student_Info WHERE studentID =" + str +" and name =\""+strr+"\"";
-                SQLiteDataAdapter adapter = new SQLiteDataAdapter(sql, conn);
-                adapter.Fill(ds);
-            }
-            return ds;
         }
     }
 }

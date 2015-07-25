@@ -28,45 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.id = new System.Windows.Forms.Label();
             this.insert = new System.Windows.Forms.Button();
-            this.tbid = new System.Windows.Forms.TextBox();
             this.worid = new System.Windows.Forms.Label();
-            this.tbname = new System.Windows.Forms.TextBox();
-            this.name = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tbPhone = new System.Windows.Forms.TextBox();
+            this.tbName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Phone = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // id
-            // 
-            this.id.AutoSize = true;
-            this.id.Location = new System.Drawing.Point(117, 62);
-            this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(15, 12);
-            this.id.TabIndex = 0;
-            this.id.Text = "id";
-            this.id.Click += new System.EventHandler(this.label1_Click);
-            // 
             // insert
             // 
-            this.insert.Location = new System.Drawing.Point(214, 234);
+            this.insert.Location = new System.Drawing.Point(60, 150);
             this.insert.Name = "insert";
             this.insert.Size = new System.Drawing.Size(75, 23);
             this.insert.TabIndex = 1;
             this.insert.Text = "inset";
             this.insert.UseVisualStyleBackColor = true;
             this.insert.Click += new System.EventHandler(this.insert_Click);
-            // 
-            // tbid
-            // 
-            this.tbid.Location = new System.Drawing.Point(214, 59);
-            this.tbid.Name = "tbid";
-            this.tbid.Size = new System.Drawing.Size(100, 21);
-            this.tbid.TabIndex = 2;
             // 
             // worid
             // 
@@ -76,22 +59,6 @@
             this.worid.Size = new System.Drawing.Size(0, 12);
             this.worid.TabIndex = 3;
             // 
-            // tbname
-            // 
-            this.tbname.Location = new System.Drawing.Point(214, 174);
-            this.tbname.Name = "tbname";
-            this.tbname.Size = new System.Drawing.Size(100, 21);
-            this.tbname.TabIndex = 6;
-            // 
-            // name
-            // 
-            this.name.AutoSize = true;
-            this.name.Location = new System.Drawing.Point(117, 174);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(37, 12);
-            this.name.TabIndex = 5;
-            this.name.Text = "name";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -100,7 +67,7 @@
             this.toolStripMenuItem3});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(692, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(192, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -122,18 +89,50 @@
             this.toolStripMenuItem3.Size = new System.Drawing.Size(53, 20);
             this.toolStripMenuItem3.Text = "Delete";
             // 
+            // tbPhone
+            // 
+            this.tbPhone.Location = new System.Drawing.Point(70, 101);
+            this.tbPhone.Name = "tbPhone";
+            this.tbPhone.Size = new System.Drawing.Size(100, 21);
+            this.tbPhone.TabIndex = 8;
+            // 
+            // tbName
+            // 
+            this.tbName.Location = new System.Drawing.Point(70, 69);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(100, 21);
+            this.tbName.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 12);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Name";
+            // 
+            // Phone
+            // 
+            this.Phone.AutoSize = true;
+            this.Phone.Location = new System.Drawing.Point(12, 104);
+            this.Phone.Name = "Phone";
+            this.Phone.Size = new System.Drawing.Size(41, 12);
+            this.Phone.TabIndex = 11;
+            this.Phone.Text = "Phone";
+            // 
             // Member
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 349);
+            this.ClientSize = new System.Drawing.Size(192, 185);
+            this.Controls.Add(this.Phone);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tbName);
+            this.Controls.Add(this.tbPhone);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.tbname);
-            this.Controls.Add(this.name);
             this.Controls.Add(this.worid);
-            this.Controls.Add(this.tbid);
             this.Controls.Add(this.insert);
-            this.Controls.Add(this.id);
             this.Name = "Member";
             this.Text = "Member";
             this.menuStrip1.ResumeLayout(false);
@@ -145,15 +144,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label id;
         private System.Windows.Forms.Button insert;
-        private System.Windows.Forms.TextBox tbid;
         private System.Windows.Forms.Label worid;
-        private System.Windows.Forms.TextBox tbname;
-        private System.Windows.Forms.Label name;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.TextBox tbPhone;
+        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Phone;
     }
 }

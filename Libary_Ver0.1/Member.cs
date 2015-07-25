@@ -23,32 +23,35 @@ namespace Libary_Ver0._1
 
         private void insert_Click(object sender, EventArgs e)
         {
-            DBManager db = new DBManager();
+            StudentDB db = new StudentDB();
             try
             {
-                data Data = new data(Convert.ToInt32(tbid.Text),
-                                                    tbname.Text,0,0,0,0);
-
+                db.istudentNum = db.primarykey();
+                db.iname = tbName.Text.ToString();
+                db.iphone = tbPhone.Text.ToString();
                 db.insert();
-                tbid.Text = "";
-                
-                tbname.Text = "";
-                MessageBox.Show("register a member.");
+                tbName.Text = "";
+                tbPhone.Text = "";
+                MessageBox.Show("register a book.");
             }
             catch (FormatException)
             {
                 MessageBox.Show("error");
-                tbid.Text = "";
-                
-                tbname.Text = "";
+                tbName.Text = "";
+                tbPhone.Text = "";
             }
             catch (OverflowException)
             {
                 MessageBox.Show("error");
-                tbid.Text = "";
-                
-                tbname.Text = "";
+                tbName.Text = "";
+                tbPhone.Text = "";
             }
         }
+
+
+
+
+
+
     }
 }

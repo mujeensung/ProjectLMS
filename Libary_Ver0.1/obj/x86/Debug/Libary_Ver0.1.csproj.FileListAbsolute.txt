@@ -30,3 +30,18 @@ C:\Dev\LibraryManagement\Libary_Ver0.1\obj\x86\Debug\Libary_Ver0._1.Member.resou
 C:\Dev\LibraryManagement\Libary_Ver0.1\obj\x86\Debug\Libary_Ver0._1.membershipinformation.resources
 C:\Dev\LibraryManagement\Libary_Ver0.1\obj\x86\Debug\$safeprojectname$.Properties.Resources.resources
 C:\Dev\LibraryManagement\Libary_Ver0.1\obj\x86\Debug\Libary_Ver0.1.csproj.GenerateResource.Cache
+C:\Users\채성종\Documents\새 폴더\Libary_Ver0.1\obj\x86\Debug\Libary_Ver0._1.add.resources
+C:\Users\채성종\Documents\새 폴더\Libary_Ver0.1\obj\x86\Debug\Libary_Ver0._1.Form1.resources
+C:\Users\채성종\Documents\새 폴더\Libary_Ver0.1\obj\x86\Debug\Libary_Ver0._1.loan.resources
+C:\Users\채성종\Documents\새 폴더\Libary_Ver0.1\obj\x86\Debug\Libary_Ver0._1.main.resources
+C:\Users\채성종\Documents\새 폴더\Libary_Ver0.1\obj\x86\Debug\Libary_Ver0._1.Member.resources
+C:\Users\채성종\Documents\새 폴더\Libary_Ver0.1\obj\x86\Debug\Libary_Ver0._1.membershipinformation.resources
+C:\Users\채성종\Documents\새 폴더\Libary_Ver0.1\obj\x86\Debug\$safeprojectname$.Properties.Resources.resources
+C:\Users\채성종\Documents\새 폴더\Libary_Ver0.1\obj\x86\Debug\Libary_Ver0.1.csproj.GenerateResource.Cache
+C:\Users\채성종\Documents\새 폴더\Libary_Ver0.1\bin\Debug\Libary_Ver0.1.exe
+C:\Users\채성종\Documents\새 폴더\Libary_Ver0.1\bin\Debug\Libary_Ver0.1.pdb
+C:\Users\채성종\Documents\새 폴더\Libary_Ver0.1\bin\Debug\System.Data.SQLite.dll
+C:\Users\채성종\Documents\새 폴더\Libary_Ver0.1\bin\Debug\System.Data.SQLite.pdb
+C:\Users\채성종\Documents\새 폴더\Libary_Ver0.1\obj\x86\Debug\Libary_Ver0.1.exe
+C:\Users\채성종\Documents\새 폴더\Libary_Ver0.1\obj\x86\Debug\Libary_Ver0.1.pdb
+C:\Users\채성종\Documents\새 폴더\Libary_Ver0.1\obj\x86\Debug\Libary_Ver0.1.csprojResolveAssemblyReference.cache
